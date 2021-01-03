@@ -1,0 +1,11 @@
+.hearderBar{
+    -fx-background-color: #43393a;
+}
+.loginPane{
+    -fx-background-color: linear-gradient(to right top, #4e92f8, #7985e1, #8f7ac9, #9971b1, #9b6a9b);}
+.btn{
+    -fx-background-color: #462fcf;
+}
+.btn:hover{
+    -fx-background-color: #3727a4;
+}

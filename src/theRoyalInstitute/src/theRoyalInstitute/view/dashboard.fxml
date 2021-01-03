@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="467.0" prefWidth="718.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="theRoyalInstitute.controller.DashboardController">
+   <children>
+      <Pane layoutY="-1.0" prefHeight="91.0" prefWidth="718.0" styleClass="hearderBar" stylesheets="@../style/Style.css">
+         <children>
+            <Label layoutX="251.0" layoutY="24.0" prefHeight="43.0" prefWidth="241.0" text="The Royal Institute" textFill="WHITE">
+               <font>
+                  <Font name="Comic Sans MS" size="26.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <TabPane layoutX="-3.0" layoutY="90.0" prefHeight="389.0" prefWidth="721.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Add Course">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="320.0" prefWidth="721.0">
+                     <children>
+                        <Label layoutX="266.0" layoutY="22.0" text="Add a new course" textFill="#351fff">
+                           <font>
+                              <Font name="Arial" size="24.0" />
+                           </font>
+                        </Label>
+                        <VBox layoutX="77.0" layoutY="80.0" prefHeight="232.0" prefWidth="201.0">
+                           <children>
+                              <Label text="Programe ID:">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="p_id" prefHeight="25.0" prefWidth="201.0">
+                                 <VBox.margin>
+                                    <Insets bottom="15.0" />
+                                 </VBox.margin>
+                              </TextField>
+                              <Label layoutX="10.0" layoutY="10.0" text="Programe name:">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="p_name" layoutX="10.0" layoutY="31.0" prefHeight="25.0" prefWidth="201.0">
+                                 <VBox.margin>
+                                    <Insets bottom="15.0" />
+                                 </VBox.margin>
+                              </TextField>
+                              <Label layoutX="10.0" layoutY="71.0" text="Duration:">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="duration" layoutX="10.0" layoutY="92.0" prefHeight="25.0" prefWidth="201.0">
+                                 <VBox.margin>
+                                    <Insets bottom="15.0" />
+                                 </VBox.margin>
+                              </TextField>
+                              <Label layoutX="10.0" layoutY="132.0" text="Fee (LKR)">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="fee" layoutX="10.0" layoutY="153.0" prefHeight="25.0" prefWidth="201.0" />
+                           </children>
+                        </VBox>
+                        <VBox layoutX="484.0" layoutY="226.0" prefHeight="86.0" prefWidth="200.0">
+                           <children>
+                              <Label text="Programe type:">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <ComboBox fx:id="pro_type" editable="true" prefHeight="25.0" prefWidth="215.0">
+                                 <VBox.margin>
+                                    <Insets bottom="15.0" />
+                                 </VBox.margin>
+                              </ComboBox>
+                              <Button mnemonicParsing="false" onAction="#finishAction" prefHeight="25.0" prefWidth="78.0" styleClass="btn" stylesheets="@../style/Style.css" text="Finish" textFill="WHITE" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Make Registration">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="303.0" prefWidth="721.0">
+                     <children>
+                        <Label layoutX="258.0" layoutY="16.0" text="Register a student" textFill="#351fff">
+                           <font>
+                              <Font name="Arial" size="24.0" />
+                           </font>
+                        </Label>
+                        <VBox layoutX="78.0" layoutY="74.0" prefHeight="214.0" prefWidth="219.0">
+                           <children>
+                              <Label text="Student ID:">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="s_id">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" />
+                                 </VBox.margin>
+                              </TextField>
+                              <Label layoutX="10.0" layoutY="10.0" text="Student Name:">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="s_name" layoutX="10.0" layoutY="35.0" />
+                              <Label layoutX="10.0" layoutY="70.0" text="Address:">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="s_address" layoutX="10.0" layoutY="95.0" />
+                              <Label layoutX="10.0" layoutY="120.0" text="Contact:">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="s_contact" layoutX="10.0" layoutY="145.0" />
+                           </children>
+                        </VBox>
+                        <VBox layoutX="403.0" layoutY="78.0" prefHeight="214.0" prefWidth="219.0">
+                           <children>
+                              <Label text="Date of birth:">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                              <DatePicker fx:id="bod" prefHeight="25.0" prefWidth="331.0">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" />
+                                 </VBox.margin>
+                              </DatePicker>
+                              <Pane prefHeight="35.0" prefWidth="200.0">
+                                 <children>
+                                    <RadioButton fx:id="male" layoutX="4.0" layoutY="1.0" mnemonicParsing="false" text="Male">
+                                       <padding>
+                                          <Insets right="10.0" top="8.0" />
+                                       </padding>
+                                    </RadioButton>
+                                    <RadioButton fx:id="female" layoutX="66.0" layoutY="1.0" mnemonicParsing="false" text="Female">
+                                       <padding>
+                                          <Insets top="8.0" />
+                                       </padding>
+                                    </RadioButton>
+                                 </children>
+                              </Pane>
+                              <Label layoutX="10.0" layoutY="10.0" text="Gender:">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                              <Button mnemonicParsing="false" onAction="#finishReg" prefHeight="25.0" prefWidth="305.0" styleClass="btn" stylesheets="@../style/Style.css" text="Finish registration" textFill="WHITE">
+                                 <font>
+                                    <Font name="Consolas" size="12.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </VBox>
+                        <HBox alignment="CENTER_LEFT" layoutX="14.0" layoutY="292.0" prefHeight="41.0" prefWidth="219.0" spacing="20.0" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Register student for course">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="203.0" layoutY="15.0" text="Register student for a course" textFill="#351fff">
+                           <font>
+                              <Font name="Arial" size="24.0" />
+                           </font>
+                        </Label>
+                        <VBox layoutX="59.0" layoutY="61.0" prefHeight="214.0" prefWidth="219.0">
+                           <children>
+                              <Label text="Select Student:">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                              <ComboBox fx:id="studentIDs" prefHeight="25.0" prefWidth="359.0">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" />
+                                 </VBox.margin>
+                              </ComboBox>
+                              <Label layoutX="10.0" layoutY="10.0" text="Reg_num:">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="reg_num" layoutX="10.0" layoutY="35.0">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" />
+                                 </VBox.margin>
+                              </TextField>
+                              <Label layoutX="10.0" layoutY="70.0" text="Reg_fee:">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="reg_fee" layoutX="10.0" layoutY="95.0">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" />
+                                 </VBox.margin>
+                              </TextField>
+                              <Label layoutX="10.0" layoutY="120.0" text="Reg_date:">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                              <DatePicker fx:id="reg_date" prefHeight="25.0" prefWidth="419.0" />
+                           </children>
+                        </VBox>
+                        <VBox layoutX="403.0" layoutY="215.0" prefHeight="33.0" prefWidth="219.0">
+                           <children>
+                              <Label text="Select Course:">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                              <ComboBox fx:id="course" onAction="#checkStudent" prefHeight="25.0" prefWidth="359.0">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" />
+                                 </VBox.margin>
+                              </ComboBox>
+                              <Button mnemonicParsing="false" onAction="#finishCourseReg" prefHeight="25.0" prefWidth="305.0" styleClass="btn" stylesheets="@../style/Style.css" text="Finish course registration" textFill="WHITE">
+                                 <font>
+                                    <Font name="Consolas" size="12.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </VBox>
+                        <Label layoutX="229.0" layoutY="317.0" prefHeight="17.0" prefWidth="241.0" textFill="#c32c2c">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Button layoutX="631.0" layoutY="317.0" mnemonicParsing="false" onAction="#refreshbtn" prefHeight="25.0" prefWidth="72.0" styleClass="btn" stylesheets="@../style/Style.css" text="Refresh" textFill="WHITE" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Display course wise content">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="187.0" layoutY="20.0" text="Display course wise content here" textFill="#351fff">
+                           <font>
+                              <Font name="Arial" size="24.0" />
+                           </font>
+                        </Label>
+                        <VBox layoutX="23.0" layoutY="60.0" prefHeight="26.0" prefWidth="195.0">
+                           <children>
+                              <Label prefHeight="18.0" prefWidth="199.0" text="Select batch:">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <ComboBox fx:id="courseBox" editable="true" onAction="#loadAlldetails" prefHeight="25.0" prefWidth="361.0" />
+                           </children>
+                        </VBox>
+                        <TableView fx:id="table" layoutX="42.0" layoutY="126.0" prefHeight="225.0" prefWidth="642.0">
+                          <columns>
+                            <TableColumn fx:id="StudentID" prefWidth="123.0" text="Student ID:" />
+                            <TableColumn fx:id="S_name" minWidth="9.0" prefWidth="112.0" text="Student Name:" />
+                              <TableColumn fx:id="Reg_date" prefWidth="120.0" text="Reg_date" />
+                              <TableColumn fx:id="course_name" prefWidth="120.0" text="Course Name:" />
+                              <TableColumn fx:id="contact_num" prefWidth="166.0" text="Contact:" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Manage Students">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="269.0" layoutY="23.0" text="Manage Students" textFill="#351fff">
+                           <font>
+                              <Font name="Arial" size="24.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
